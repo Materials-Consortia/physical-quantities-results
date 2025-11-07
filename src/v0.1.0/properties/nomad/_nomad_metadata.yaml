@@ -20,10 +20,6 @@ description: |-
   - **Requirements/Conventions**:
     - **Support**: OPTIONAL support in implementations.
     - **Query**: Implementation-dependent queryability.
-  - **Examples**:
-    - Units, dimensions, coordinate systems
-    - Calculation parameters
-    - Visualization settings
 examples:
   - {"units": "eV", "method": "DFT"}
 x-optimade-unit: "inapplicable"

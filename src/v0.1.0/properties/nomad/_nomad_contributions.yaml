@@ -20,9 +20,6 @@ description: |-
     - **Support**: OPTIONAL support in implementations, i.e., MAY be empty array.
     - **Query**: MAY be queryable for exploring property decompositions.
     - **Note**: Contributions should not have nested contributions.
-  - **Examples**:
-    - ["kinetic_energy_001", "potential_energy_001"] (for TotalEnergy)
-    - ["exchange_energy_001", "correlation_energy_001"] (for XCEnergy)
 examples:
   - ["kinetic_energy_001", "potential_energy_001"]
 x-optimade-unit: "inapplicable"

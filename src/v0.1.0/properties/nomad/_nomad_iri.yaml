@@ -20,8 +20,6 @@ description: |-
   - **Requirements/Conventions**:
     - **Support**: OPTIONAL support in implementations, i.e., MAY be empty string.
     - **Query**: SHOULD be a queryable property.
-  - **Examples**:
-    - "https://w3id.org/emmo/domain/electrochemistry#electrochemistry_43cd6e14_dd43_41b5_b5b4_4db94403c9e8"
 examples:
   - "https://w3id.org/emmo/domain/electrochemistry#electrochemistry_43cd6e14_dd43_41b5_b5b4_4db94403c9e8"
 x-optimade-unit: "inapplicable"

@@ -13,16 +13,12 @@ type:
   - "string"
   - "null"
 description: |-
-  Reference to the entity that the physical property refers to. Examples: macroscopic system vs specific atom in unit cell.
+  Reference to the entity that the physical property refers to.
   
   - **Type**: string (reference/ID to Entity).
   - **Requirements/Conventions**:
     - **Support**: OPTIONAL support in implementations, i.e., MAY be null.
     - **Query**: MAY be queryable for entity-specific filtering.
-  - **Examples**:
-    - "system_001"
-    - "atom_fe_1"
-    - "unit_cell"
 examples:
   - "system_001"
   - "atom_fe_1"

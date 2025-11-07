@@ -12,16 +12,12 @@ x-optimade-definition:
 type:
   - "string"
 description: |-
-  Name of the physical property. Example: 'ElectronicBandGap'.
+  Name of the physical property.
   
   - **Type**: string.
   - **Requirements/Conventions**:
     - **Support**: REQUIRED in implementations.
     - **Query**: MUST be a queryable property with support for all mandatory filter features.
-  - **Examples**:
-    - "ElectronicBandGap"
-    - "TotalEnergy"
-    - "ElectronicDensityOfStates"
 examples:
   - "ElectronicBandGap"
   - "TotalEnergy"

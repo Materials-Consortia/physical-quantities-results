@@ -19,10 +19,6 @@ description: |-
   - **Requirements/Conventions**:
     - **Support**: OPTIONAL support in implementations as structure varies by property type.
     - **Query**: MAY be queryable depending on property type and implementation.
-  - **Examples**:
-    - "1.5" (for a scalar band gap in eV)
-    - "[1.2, 1.8, 2.1]" (for multiple values)
-    - JSON strings for complex structures
 examples:
   - "1.5"
   - "[1.2, 1.8, 2.1]"

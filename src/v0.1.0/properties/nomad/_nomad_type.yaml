@@ -13,17 +13,12 @@ type:
   - "string"
   - "null"
 description: |-
-  Type categorization of the physical property. Example: an 'ElectronicBandGap' can be 'direct' or 'indirect'.
+  Type categorization of the physical property.
   
   - **Type**: string.
   - **Requirements/Conventions**:
     - **Support**: OPTIONAL support in implementations, i.e., MAY be null.
     - **Query**: SHOULD be a queryable property with support for all mandatory filter features.
-  - **Examples**:
-    - "direct"
-    - "indirect"
-    - "kinetic"
-    - "potential"
 examples:
   - "direct"
   - "indirect"

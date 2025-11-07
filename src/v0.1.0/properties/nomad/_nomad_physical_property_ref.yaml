@@ -19,9 +19,6 @@ description: |-
   - **Requirements/Conventions**:
     - **Support**: OPTIONAL support in implementations, i.e., MAY be null.
     - **Query**: SHOULD be a queryable property for traversing derivation chains.
-  - **Examples**:
-    - "property_123"
-    - "total_energy_dft_001"
 examples:
   - "property_123"
   - "total_energy_dft_001"
