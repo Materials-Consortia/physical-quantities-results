@@ -1,0 +1,33 @@
+$$schema: "https://schemas.optimade.org/meta/v1.2/optimade/property_definition"
+$id: "https://example.org/schemas/v0.1/properties/nomad/_nomad_contributions"
+title: "Property Contributions"
+$comment: "Shallow list of contributions to the physical property."
+x-optimade-type: "list"
+x-optimade-definition:
+  kind: "property"
+  version: "0.1.0"
+  format: "1.2"
+  name: "_nomad_contributions"
+  label: "_nomad_contributions_nomad"
+type:
+  - "array"
+  - "null"
+description: |-
+  Shallow list of contributions to the physical property. Does not necessarily entail a full partitioning. Each contribution is itself a PhysicalProperty.
+  
+  - **Type**: array of PhysicalProperty references.
+  - **Requirements/Conventions**:
+    - **Support**: OPTIONAL support in implementations, i.e., MAY be empty array.
+    - **Query**: MAY be queryable for exploring property decompositions.
+    - **Note**: Contributions should not have nested contributions.
+  - **Examples**:
+    - ["kinetic_energy_001", "potential_energy_001"] (for TotalEnergy)
+    - ["exchange_energy_001", "correlation_energy_001"] (for XCEnergy)
+examples:
+  - ["kinetic_energy_001", "potential_energy_001"]
+x-optimade-unit: "inapplicable"
+items:
+  x-optimade-type: "string"
+  type:
+    - "string"
+  x-optimade-unit: "inapplicable"

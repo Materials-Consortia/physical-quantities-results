@@ -1,0 +1,28 @@
+$$schema: "https://schemas.optimade.org/meta/v1.2/optimade/property_definition"
+$id: "https://example.org/schemas/v0.1/properties/nomad/_nomad_physical_property_ref"
+title: "Physical Property Reference"
+$comment: "Reference to the PhysicalProperty from which this property was derived."
+x-optimade-type: "string"
+x-optimade-definition:
+  kind: "property"
+  version: "0.1.0"
+  format: "1.2"
+  name: "_nomad_physical_property_ref"
+  label: "_nomad_physical_property_ref_nomad"
+type:
+  - "string"
+  - "null"
+description: |-
+  Reference to the PhysicalProperty from which this property was derived.
+  
+  - **Type**: string (reference/ID to another PhysicalProperty).
+  - **Requirements/Conventions**:
+    - **Support**: OPTIONAL support in implementations, i.e., MAY be null.
+    - **Query**: SHOULD be a queryable property for traversing derivation chains.
+  - **Examples**:
+    - "property_123"
+    - "total_energy_dft_001"
+examples:
+  - "property_123"
+  - "total_energy_dft_001"
+x-optimade-unit: "inapplicable"

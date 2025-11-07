@@ -1,0 +1,27 @@
+$$schema: "https://schemas.optimade.org/meta/v1.2/optimade/property_definition"
+$id: "https://example.org/schemas/v0.1/properties/nomad/_nomad_iri"
+title: "Internationalized Resource Identifier"
+$comment: "IRI pointing to a definition within an ontological framework."
+x-optimade-type: "string"
+x-optimade-definition:
+  kind: "property"
+  version: "0.1.0"
+  format: "1.2"
+  name: "_nomad_iri"
+  label: "_nomad_iri_nomad"
+type:
+  - "string"
+  - "null"
+format: "uri"
+description: |-
+  Internationalized Resource Identifier (IRI) pointing to a definition, typically within a larger, ontological framework.
+  
+  - **Type**: string (URI format).
+  - **Requirements/Conventions**:
+    - **Support**: OPTIONAL support in implementations, i.e., MAY be empty string.
+    - **Query**: SHOULD be a queryable property.
+  - **Examples**:
+    - "https://w3id.org/emmo/domain/electrochemistry#electrochemistry_43cd6e14_dd43_41b5_b5b4_4db94403c9e8"
+examples:
+  - "https://w3id.org/emmo/domain/electrochemistry#electrochemistry_43cd6e14_dd43_41b5_b5b4_4db94403c9e8"
+x-optimade-unit: "inapplicable"

@@ -1,0 +1,29 @@
+$$schema: "https://schemas.optimade.org/meta/v1.2/optimade/property_definition"
+$id: "https://example.org/schemas/v0.1/properties/nomad/_nomad_entity_ref"
+title: "Entity Reference"
+$comment: "Reference to the entity that the physical property refers to."
+x-optimade-type: "string"
+x-optimade-definition:
+  kind: "property"
+  version: "0.1.0"
+  format: "1.2"
+  name: "_nomad_entity_ref"
+  label: "_nomad_entity_ref_nomad"
+type:
+  - "string"
+  - "null"
+description: |-
+  Reference to the entity that the physical property refers to. Examples: macroscopic system vs specific atom in unit cell.
+  
+  - **Type**: string (reference/ID to Entity).
+  - **Requirements/Conventions**:
+    - **Support**: OPTIONAL support in implementations, i.e., MAY be null.
+    - **Query**: MAY be queryable for entity-specific filtering.
+  - **Examples**:
+    - "system_001"
+    - "atom_fe_1"
+    - "unit_cell"
+examples:
+  - "system_001"
+  - "atom_fe_1"
+x-optimade-unit: "inapplicable"

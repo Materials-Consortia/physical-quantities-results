@@ -1,0 +1,26 @@
+$$schema: "https://schemas.optimade.org/meta/v1.2/optimade/property_definition"
+$id: "https://example.org/schemas/v0.1/properties/nomad/_nomad_value"
+title: "Physical Property Value"
+$comment: "The main property data value with varying type and structure."
+x-optimade-type: "unknown"
+x-optimade-definition:
+  kind: "property"
+  version: "0.1.0"
+  format: "1.2"
+  name: "_nomad_value"
+  label: "_nomad_value_nomad"
+description: |-
+  The main property data value. The specific type and structure depend on the property.
+  
+  - **Type**: varies (number, array, object).
+  - **Requirements/Conventions**:
+    - **Support**: OPTIONAL support in implementations as structure varies by property type.
+    - **Query**: MAY be queryable depending on property type and implementation.
+  - **Examples**:
+    - 1.5 (for a scalar band gap in eV)
+    - [1.2, 1.8, 2.1] (for multiple values)
+    - Complex structures for band structures, DOS, etc.
+examples:
+  - 1.5
+  - [1.2, 1.8, 2.1]
+x-optimade-unit: "inapplicable"
