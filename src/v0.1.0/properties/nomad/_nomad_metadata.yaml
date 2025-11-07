@@ -12,6 +12,7 @@ x-optimade-definition:
 type:
   - "object"
   - "null"
+properties: {}
 description: |-
   Additional metadata fields that may vary by property type and implementation.
   
