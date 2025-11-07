@@ -1,0 +1,24 @@
+$$schema: "https://schemas.optimade.org/meta/v1.2/optimade/property_definition"
+$id: "https://example.org/schemas/v0.1/properties/nomad/_nomad_total_forces"
+title: "Total Forces"
+$comment: "Array of total forces on atoms (serialized as JSON string)."
+x-optimade-type: "string"
+x-optimade-definition:
+  kind: "property"
+  version: "0.1.0"
+  format: "1.2"
+  name: "_nomad_total_forces"
+  label: "_nomad_total_forces_nomad"
+type:
+  - "string"
+  - "null"
+description: |-
+  Array of total forces on atoms in the system, serialized as JSON string.
+  
+  - **Type**: string (JSON array serialization).
+  - **Requirements/Conventions**:
+    - **Support**: SHOULD be supported by implementations focused on structural properties.
+    - **Query**: SHOULD be queryable for force analysis.
+examples:
+  - '[{"value": [0.1, -0.2, 0.0], "contributions": []}]'
+x-optimade-unit: "inapplicable"

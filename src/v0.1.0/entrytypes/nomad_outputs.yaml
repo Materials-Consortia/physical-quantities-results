@@ -1,0 +1,106 @@
+$$schema: "https://schemas.optimade.org/meta/v1.2/optimade/entrytype_definition"
+$id: "https://example.org/schemas/v0.1/entrytypes/nomad_outputs"
+type: object
+title: "NOMAD computational outputs entrytype"
+x-optimade-definition:
+  kind: "entrytype"
+  format: "1.2"
+  version: "0.1.0"
+  name: "nomad_outputs"
+  label: "nomad_outputs_entrytype_exmpl"
+properties:
+  id:
+    $$inherit: "/defs/v1.2/properties/core/id"
+    x-optimade-implementation:
+      support: "yes"
+      sortable: true
+      query-support: "all mandatory"
+      response-level: "always"
+
+  type:
+    $$inherit: "/defs/v1.2/properties/core/type"
+    x-optimade-implementation:
+      support: "yes"
+      sortable: true
+      query-support: "all mandatory"
+      response-level: "always"
+
+  immutable_id:
+    $$inherit: "/defs/v1.2/properties/core/immutable_id"
+    x-optimade-implementation:
+      support: "no"
+      sortable: false
+      query-support: "all mandatory"
+      response-level: "no"
+
+  last_modified:
+    $$inherit: "/defs/v1.2/properties/core/last_modified"
+    x-optimade-implementation:
+      support: "yes"
+      sortable: false
+      query-support: "all mandatory"
+      response-level: "yes"
+
+  model_system_ref:
+    $$inherit: "/properties/nomad/_nomad_model_system_ref"
+    x-optimade-implementation:
+      support: "yes"
+      sortable: true
+      query-support: "all mandatory"
+      response-level: "always"
+
+  model_method_ref:
+    $$inherit: "/properties/nomad/_nomad_model_method_ref"
+    x-optimade-implementation:
+      support: "yes"
+      sortable: true
+      query-support: "all mandatory"
+      response-level: "always"
+
+  total_energies:
+    $$inherit: "/properties/nomad/_nomad_total_energies"
+    x-optimade-implementation:
+      support: "yes"
+      sortable: false
+      query-support: "all mandatory"
+      response-level: "yes"
+
+  electronic_band_gaps:
+    $$inherit: "/properties/nomad/_nomad_electronic_band_gaps"
+    x-optimade-implementation:
+      support: "yes"
+      sortable: false
+      query-support: "all mandatory"
+      response-level: "yes"
+
+  electronic_eigenvalues:
+    $$inherit: "/properties/nomad/_nomad_electronic_eigenvalues"
+    x-optimade-implementation:
+      support: "yes"
+      sortable: false
+      query-support: "all mandatory"
+      response-level: "yes"
+
+  electronic_dos:
+    $$inherit: "/properties/nomad/_nomad_electronic_dos"
+    x-optimade-implementation:
+      support: "yes"
+      sortable: false
+      query-support: "all mandatory"
+      response-level: "yes"
+
+  total_forces:
+    $$inherit: "/properties/nomad/_nomad_total_forces"
+    x-optimade-implementation:
+      support: "yes"
+      sortable: false
+      query-support: "all mandatory"
+      response-level: "yes"
+
+  temperatures:
+    $$inherit: "/properties/nomad/_nomad_temperatures"
+    x-optimade-implementation:
+      support: "yes"
+      sortable: false
+      query-support: "all mandatory"
+      response-level: "yes"

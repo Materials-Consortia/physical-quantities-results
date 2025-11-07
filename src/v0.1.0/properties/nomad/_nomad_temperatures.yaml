@@ -1,0 +1,24 @@
+$$schema: "https://schemas.optimade.org/meta/v1.2/optimade/property_definition"
+$id: "https://example.org/schemas/v0.1/properties/nomad/_nomad_temperatures"
+title: "Temperatures"
+$comment: "Array of system temperature values (serialized as JSON string)."
+x-optimade-type: "string"
+x-optimade-definition:
+  kind: "property"
+  version: "0.1.0"
+  format: "1.2"
+  name: "_nomad_temperatures"
+  label: "_nomad_temperatures_nomad"
+type:
+  - "string"
+  - "null"
+description: |-
+  Array of system temperature values, serialized as JSON string.
+  
+  - **Type**: string (JSON array serialization).
+  - **Requirements/Conventions**:
+    - **Support**: OPTIONAL support in implementations.
+    - **Query**: SHOULD be queryable for thermodynamic analysis.
+examples:
+  - '[{"value": 300.0, "origin": "MD_simulation"}]'
+x-optimade-unit: "inapplicable"
