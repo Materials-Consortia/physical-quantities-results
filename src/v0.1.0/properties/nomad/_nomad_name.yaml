@@ -1,0 +1,24 @@
+$$schema: "https://schemas.optimade.org/meta/v1.2/optimade/property_definition"
+$id: "https://example.org/schemas/v0.1/properties/nomad/_nomad_name"
+title: "Physical Property Name"
+$comment: "Name of the physical property from NOMAD schema."
+x-optimade-type: "string"
+x-optimade-definition:
+  kind: "property"
+  version: "0.1.0"
+  format: "1.2"
+  name: "_nomad_name"
+  label: "_nomad_name_nomad"
+type:
+  - "string"
+description: |-
+  Name of the physical property.
+  
+  - **Type**: string.
+  - **Requirements/Conventions**:
+    - **Support**: REQUIRED in implementations.
+    - **Query**: MUST be a queryable property with support for all mandatory filter features.
+examples:
+  - "ElectronicBandGap"
+  - "TotalEnergy"
+x-optimade-unit: "inapplicable"

@@ -1,0 +1,25 @@
+$$schema: "https://schemas.optimade.org/meta/v1.2/optimade/property_definition"
+$id: "https://example.org/schemas/v0.1/properties/nomad/_nomad_type"
+title: "Physical Property Type"
+$comment: "Type categorization of the physical property."
+x-optimade-type: "string"
+x-optimade-definition:
+  kind: "property"
+  version: "0.1.0"
+  format: "1.2"
+  name: "_nomad_type"
+  label: "_nomad_type_nomad"
+type:
+  - "string"
+  - "null"
+description: |-
+  Type categorization of the physical property.
+  
+  - **Type**: string.
+  - **Requirements/Conventions**:
+    - **Support**: OPTIONAL support in implementations, i.e., MAY be null.
+    - **Query**: SHOULD be a queryable property with support for all mandatory filter features.
+examples:
+  - "direct"
+  - "indirect"
+x-optimade-unit: "inapplicable"

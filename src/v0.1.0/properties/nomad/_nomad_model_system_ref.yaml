@@ -1,0 +1,24 @@
+$$schema: "https://schemas.optimade.org/meta/v1.2/optimade/property_definition"
+$id: "https://example.org/schemas/v0.1/properties/nomad/_nomad_model_system_ref"
+title: "Model System Reference"
+$comment: "Reference to the ModelSystem section in which the output physical properties were calculated."
+x-optimade-type: "string"
+x-optimade-definition:
+  kind: "property"
+  version: "0.1.0"
+  format: "1.2"
+  name: "_nomad_model_system_ref"
+  label: "_nomad_model_system_ref_nomad"
+type:
+  - "string"
+description: |-
+  Reference to the ModelSystem section in which the output physical properties were calculated.
+  
+  - **Type**: string (reference ID).
+  - **Requirements/Conventions**:
+    - **Support**: REQUIRED in implementations.
+    - **Query**: MUST be a queryable property with support for all mandatory filter features.
+examples:
+  - "system_001"
+  - "bulk_silicon_primitive_cell"
+x-optimade-unit: "inapplicable"

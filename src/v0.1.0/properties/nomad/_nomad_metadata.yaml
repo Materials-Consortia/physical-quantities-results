@@ -1,0 +1,25 @@
+$$schema: "https://schemas.optimade.org/meta/v1.2/optimade/property_definition"
+$id: "https://example.org/schemas/v0.1/properties/nomad/_nomad_metadata"
+title: "Property Metadata"
+$comment: "Additional metadata fields that may vary by property type and implementation."
+x-optimade-type: "dictionary"
+x-optimade-definition:
+  kind: "property"
+  version: "0.1.0"
+  format: "1.2"
+  name: "_nomad_metadata"
+  label: "_nomad_metadata_nomad"
+type:
+  - "object"
+  - "null"
+properties: {}
+description: |-
+  Additional metadata fields that may vary by property type and implementation.
+  
+  - **Type**: object (flexible schema).
+  - **Requirements/Conventions**:
+    - **Support**: OPTIONAL support in implementations.
+    - **Query**: Implementation-dependent queryability.
+examples:
+  - {"units": "eV", "method": "DFT"}
+x-optimade-unit: "inapplicable"

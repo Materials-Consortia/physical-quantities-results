@@ -1,0 +1,25 @@
+$$schema: "https://schemas.optimade.org/meta/v1.2/optimade/property_definition"
+$id: "https://example.org/schemas/v0.1/properties/nomad/_nomad_value"
+title: "Physical Property Value"
+$comment: "The main property data value with varying type and structure."
+x-optimade-type: "string"
+x-optimade-definition:
+  kind: "property"
+  version: "0.1.0"
+  format: "1.2"
+  name: "_nomad_value"
+  label: "_nomad_value_nomad"
+type:
+  - "string"
+  - "null"
+description: |-
+  The main property data value stored as a string representation. The specific content and structure depend on the property.
+  
+  - **Type**: string (serialized representation).
+  - **Requirements/Conventions**:
+    - **Support**: OPTIONAL support in implementations as structure varies by property type.
+    - **Query**: MAY be queryable depending on property type and implementation.
+examples:
+  - "1.5"
+  - "[1.2, 1.8, 2.1]"
+x-optimade-unit: "inapplicable"

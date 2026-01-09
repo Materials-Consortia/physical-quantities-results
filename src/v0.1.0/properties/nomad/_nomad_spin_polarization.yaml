@@ -1,0 +1,29 @@
+$$schema: "https://schemas.optimade.org/meta/v1.2/optimade/property_definition"
+$id: "https://example.org/schemas/v0.1/properties/nomad/_nomad_spin_polarization"
+title: "Spin Polarization"
+$comment: "Degree of spin polarization in magnetic systems."
+x-optimade-type: "float"
+x-optimade-definition:
+  kind: "property"
+  version: "0.1.0"
+  format: "1.2"
+  name: "_nomad_spin_polarization"
+  label: "_nomad_spin_polarization_nomad"
+type:
+  - "number"
+  - "null"
+description: |-
+  Degree of spin polarization in magnetic systems, defined as (n_up - n_down)/(n_up + n_down).
+  
+  - **Type**: float between -1 and 1.
+  - **Requirements/Conventions**:
+    - **Support**: OPTIONAL support in implementations.
+    - **Query**: SHOULD be queryable for magnetic system filtering.
+    - **Range**: -1.0 (fully down-polarized) to +1.0 (fully up-polarized).
+examples:
+  - 0.75
+  - -0.25
+  - 0.0
+x-optimade-unit: "inapplicable"
+minimum: -1.0
+maximum: 1.0

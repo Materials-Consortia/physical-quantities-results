@@ -1,0 +1,24 @@
+$$schema: "https://schemas.optimade.org/meta/v1.2/optimade/property_definition"
+$id: "https://example.org/schemas/v0.1/properties/nomad/_nomad_total_energies"
+title: "Total Energies"
+$comment: "Array of total energy values for the system (serialized as JSON string)."
+x-optimade-type: "string"
+x-optimade-definition:
+  kind: "property"
+  version: "0.1.0"
+  format: "1.2"
+  name: "_nomad_total_energies"
+  label: "_nomad_total_energies_nomad"
+type:
+  - "string"
+  - "null"
+description: |-
+  Array of total energy values for the system, serialized as JSON string.
+  
+  - **Type**: string (JSON array serialization).
+  - **Requirements/Conventions**:
+    - **Support**: MUST be supported by all implementations.
+    - **Query**: MUST be queryable for energy-based filtering and analysis.
+examples:
+  - '[{"value": -123.45, "contributions": []}]'
+x-optimade-unit: "inapplicable"
