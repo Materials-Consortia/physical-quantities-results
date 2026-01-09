@@ -1,0 +1,42 @@
+$$schema: "https://schemas.optimade.org/meta/v1.2/optimade/property_definition"
+$id: "https://example.org/schemas/v0.1/properties/nomad/_nomad_spin_orbit_coupling"
+title: "Spin-Orbit Coupling"
+$comment: "Spin-orbit coupling treatment and strength parameters."
+x-optimade-type: "dictionary"
+x-optimade-definition:
+  kind: "property"
+  version: "0.1.0"
+  format: "1.2"
+  name: "_nomad_spin_orbit_coupling"
+  label: "_nomad_spin_orbit_coupling_nomad"
+type:
+  - "object"
+  - "null"
+description: |-
+  Spin-orbit coupling treatment and strength parameters.
+  
+  - **Type**: object containing SOC methodology and parameters.
+  - **Requirements/Conventions**:
+    - **Support**: OPTIONAL support in implementations.
+    - **Query**: MAY be queryable for SOC-related filtering.
+examples:
+  - {"enabled": true, "strength": 0.15, "treatment": "relativistic"}
+  - {"enabled": false, "strength": 0.0, "treatment": "none"}
+x-optimade-unit: "inapplicable"
+properties:
+  enabled:
+    x-optimade-type: "boolean"
+    type:
+      - "boolean"
+    x-optimade-unit: "inapplicable"
+  strength:
+    x-optimade-type: "float"
+    type:
+      - "number"
+      - "null"
+    x-optimade-unit: "joule"
+  treatment:
+    x-optimade-type: "string"
+    type:
+      - "string"
+    x-optimade-unit: "inapplicable"

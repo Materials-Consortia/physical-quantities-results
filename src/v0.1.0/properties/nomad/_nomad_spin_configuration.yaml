@@ -1,0 +1,43 @@
+$$schema: "https://schemas.optimade.org/meta/v1.2/optimade/property_definition"
+$id: "https://example.org/schemas/v0.1/properties/nomad/_nomad_spin_configuration"
+title: "Spin Configuration"
+$comment: "Defines the spin treatment and configuration for electronic calculations."
+x-optimade-type: "dictionary"
+x-optimade-definition:
+  kind: "property"
+  version: "0.1.0"
+  format: "1.2"
+  name: "_nomad_spin_configuration"
+  label: "_nomad_spin_configuration_nomad"
+type:
+  - "object"
+  - "null"
+description: |-
+  Defines the spin treatment and configuration for electronic calculations.
+  
+  - **Type**: object containing spin methodology and channel information.
+  - **Requirements/Conventions**:
+    - **Support**: SHOULD be supported by implementations focused on electronic structure.
+    - **Query**: SHOULD be queryable for spin-dependent filtering.
+examples:
+  - {"spin_treatment": "polarized", "channel": 0, "label": "up"}
+  - {"spin_treatment": "unpolarized", "channel": null, "label": null}
+x-optimade-unit: "inapplicable"
+properties:
+  spin_treatment:
+    x-optimade-type: "string"
+    type:
+      - "string"
+    x-optimade-unit: "inapplicable"
+  channel:
+    x-optimade-type: "integer"
+    type:
+      - "integer"
+      - "null"
+    x-optimade-unit: "inapplicable"
+  label:
+    x-optimade-type: "string"
+    type:
+      - "string"
+      - "null"
+    x-optimade-unit: "inapplicable"
