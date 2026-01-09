@@ -1,0 +1,35 @@
+$$schema: "https://schemas.optimade.org/meta/v1.2/optimade/property_definition"
+$id: "https://example.org/schemas/v0.1/properties/nomad/_nomad_magnetic_moments"
+title: "Magnetic Moments"
+$comment: "Magnetic moments per atom or total system magnetic moment."
+x-optimade-type: "list"
+x-optimade-definition:
+  kind: "property"
+  version: "0.1.0"
+  format: "1.2"
+  name: "_nomad_magnetic_moments"
+  label: "_nomad_magnetic_moments_nomad"
+type:
+  - "array"
+  - "null"
+description: |-
+  Magnetic moments per atom or total system magnetic moment.
+  
+  - **Type**: array of magnetic moment vectors.
+  - **Requirements/Conventions**:
+    - **Support**: SHOULD be supported by implementations focused on magnetic systems.
+    - **Query**: SHOULD be queryable for magnetic property analysis.
+examples:
+  - [[0.0, 0.0, 2.1], [0.0, 0.0, -2.1]]
+  - [[1.5, 0.2, 0.8]]
+x-optimade-unit: "bohrmagneton"
+items:
+  x-optimade-type: "list"
+  type:
+    - "array"
+  x-optimade-unit: "inapplicable"
+  items:
+    x-optimade-type: "float"
+    type:
+      - "number"
+    x-optimade-unit: "bohrmagneton"
