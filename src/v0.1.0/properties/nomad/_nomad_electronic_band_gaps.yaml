@@ -1,8 +1,8 @@
 $$schema: "https://schemas.optimade.org/meta/v1.2/optimade/property_definition"
 $id: "https://example.org/schemas/v0.1/properties/nomad/_nomad_electronic_band_gaps"
 title: "Electronic Band Gaps"
-$comment: "Array of electronic band gap values (serialized as JSON string)."
-x-optimade-type: "string"
+$comment: "Array of electronic band gap values with proper spin handling."
+x-optimade-type: "list"
 x-optimade-definition:
   kind: "property"
   version: "0.1.0"
@@ -10,15 +10,45 @@ x-optimade-definition:
   name: "_nomad_electronic_band_gaps"
   label: "_nomad_electronic_band_gaps_nomad"
 type:
-  - "string"
+  - "array"
   - "null"
 description: |-
-  Array of electronic band gap values (direct/indirect), serialized as JSON string.
+  Array of electronic band gap values (direct/indirect) with proper spin configuration handling.
   
-  - **Type**: string (JSON array serialization).
+  - **Type**: array of band gap objects.
   - **Requirements/Conventions**:
     - **Support**: SHOULD be supported by implementations focused on electronic structure.
     - **Query**: MUST be queryable for band gap filtering.
 examples:
-  - '[{"value": 1.2, "spin_channel": 0, "momentum_transfer": 0.0}]'
+  - [{"value": 1.2, "gap_type": "direct", "momentum_transfer": 0.0, "spin_config_ref": "spin_001"}]
+  - [{"value": 0.8, "gap_type": "indirect", "momentum_transfer": 0.15, "spin_config_ref": null}]
 x-optimade-unit: "inapplicable"
+items:
+  x-optimade-type: "dictionary"
+  type:
+    - "object"
+  x-optimade-unit: "inapplicable"
+  properties:
+    value:
+      x-optimade-type: "float"
+      type:
+        - "number"
+      x-optimade-unit: "joule"
+    gap_type:
+      x-optimade-type: "string"
+      type:
+        - "string"
+        - "null"
+      x-optimade-unit: "inapplicable"
+    momentum_transfer:
+      x-optimade-type: "float"
+      type:
+        - "number"
+        - "null"
+      x-optimade-unit: "inapplicable"
+    spin_config_ref:
+      x-optimade-type: "string"
+      type:
+        - "string"
+        - "null"
+      x-optimade-unit: "inapplicable"

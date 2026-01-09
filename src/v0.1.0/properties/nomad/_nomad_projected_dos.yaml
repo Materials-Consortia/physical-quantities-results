@@ -1,0 +1,60 @@
+$$schema: "https://schemas.optimade.org/meta/v1.2/optimade/property_definition"
+$id: "https://example.org/schemas/v0.1/properties/nomad/_nomad_projected_dos"
+title: "Projected Density of States"
+$comment: "Array of projected DOS data with orbital/atom projections."
+x-optimade-type: "list"
+x-optimade-definition:
+  kind: "property"
+  version: "0.1.0"
+  format: "1.2"
+  name: "_nomad_projected_dos"
+  label: "_nomad_projected_dos_nomad"
+type:
+  - "array"
+  - "null"
+description: |-
+  Array of projected density of states data decomposed by orbitals, atoms, or other basis sets.
+  
+  - **Type**: array of projected DOS objects.
+  - **Requirements/Conventions**:
+    - **Support**: OPTIONAL support in implementations.
+    - **Query**: MAY be queryable for orbital analysis.
+examples:
+  - [{"projection_type": "orbital", "projection_label": "d", "energies": [-2, -1, 0], "values": [0.05, 0.1, 0.08]}]
+x-optimade-unit: "inapplicable"
+items:
+  x-optimade-type: "dictionary"
+  type:
+    - "object"
+  x-optimade-unit: "inapplicable"
+  properties:
+    projection_type:
+      x-optimade-type: "string"
+      type:
+        - "string"
+      x-optimade-unit: "inapplicable"
+    projection_label:
+      x-optimade-type: "string"
+      type:
+        - "string"
+      x-optimade-unit: "inapplicable"
+    energies:
+      x-optimade-type: "list"
+      type:
+        - "array"
+      x-optimade-unit: "joule"
+      items:
+        x-optimade-type: "float"
+        type:
+          - "number"
+        x-optimade-unit: "joule"
+    values:
+      x-optimade-type: "list"
+      type:
+        - "array"
+      x-optimade-unit: "1/joule"
+      items:
+        x-optimade-type: "float"
+        type:
+          - "number"
+        x-optimade-unit: "1/joule"

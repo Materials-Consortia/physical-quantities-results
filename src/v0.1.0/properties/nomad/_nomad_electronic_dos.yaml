@@ -1,8 +1,8 @@
 $$schema: "https://schemas.optimade.org/meta/v1.2/optimade/property_definition"
 $id: "https://example.org/schemas/v0.1/properties/nomad/_nomad_electronic_dos"
 title: "Electronic Density of States"
-$comment: "Array of electronic density of states data (serialized as JSON string)."
-x-optimade-type: "string"
+$comment: "Generic electronic density of states data."
+x-optimade-type: "dictionary"
 x-optimade-definition:
   kind: "property"
   version: "0.1.0"
@@ -10,15 +10,36 @@ x-optimade-definition:
   name: "_nomad_electronic_dos"
   label: "_nomad_electronic_dos_nomad"
 type:
-  - "string"
+  - "object"
   - "null"
 description: |-
-  Array of electronic density of states data, serialized as JSON string.
+  Generic electronic density of states data.
   
-  - **Type**: string (JSON array serialization).
+  - **Type**: object containing energy grid and DOS values.
   - **Requirements/Conventions**:
     - **Support**: SHOULD be supported by implementations focused on electronic structure.
     - **Query**: SHOULD be queryable for DOS analysis.
 examples:
-  - '[{"projected_dos": [{"energies": [-5, -4, -3], "values": [0.1, 0.2, 0.3]}]}]'
+  - {"energies": [-5, -4, -3, -2, -1], "values": [0.1, 0.2, 0.3, 0.2, 0.1]}
 x-optimade-unit: "inapplicable"
+properties:
+  energies:
+    x-optimade-type: "list"
+    type:
+      - "array"
+    x-optimade-unit: "joule"
+    items:
+      x-optimade-type: "float"
+      type:
+        - "number"
+      x-optimade-unit: "joule"
+  values:
+    x-optimade-type: "list"
+    type:
+      - "array"
+    x-optimade-unit: "1/joule"
+    items:
+      x-optimade-type: "float"
+      type:
+        - "number"
+      x-optimade-unit: "1/joule"
